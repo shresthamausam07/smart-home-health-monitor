@@ -1,0 +1,384 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.header p {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+}
+
+.status {
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+}
+
+.status.ready {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.loading,
+.status.refreshing {
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.status.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.controls {
+  margin: 0.75rem 0 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rangeButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.rangeBtn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+}
+
+.rangeBtn.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.alerts {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.8rem;
+  margin: 0.8rem 0;
+}
+
+.alertSummary {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.7rem;
+}
+
+.alertSummary p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.alertSummary h2 {
+  margin: 0.25rem 0 0;
+}
+
+.alertBadges {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.alertBadge {
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.82rem;
+  border: 1px solid transparent;
+}
+
+.alertBadge.ok {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.alertBadge.danger {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
+
+.metrics {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  margin: 1rem 0;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.95rem;
+}
+
+.card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.card h2 {
+  margin: 0.3rem 0 0;
+  font-size: 1.35rem;
+}
+
+.card small {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.vocStatus {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chartCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.95rem;
+}
+
+.chartCard h3 {
+  margin: 0 0 0.65rem;
+}
+
+.chartCard h3 small {
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chartWrap {
+  width: 100%;
+  height: 320px;
+}
+
+.sensorStatusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.65rem;
+}
+
+.sensorStatusCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.65rem;
+  background: #f8fafc;
+}
+
+.sensorStatusHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.sensorPill {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid transparent;
+}
+
+.sensorPill.active {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.sensorPill.warning {
+  background: #fef3c7;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+.sensorPill.inactive {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
+
+.sleepLogger { margin-top: 0.6rem; }
+
+.sleepForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-top: 0.75rem;
+}
+
+.sleepForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.sleepForm input[type="date"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.sleepScoreRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sleepScoreRow input[type="range"] {
+  width: 140px;
+  accent-color: #1f6feb;
+}
+
+.sleepScoreBadge {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f6feb;
+  min-width: 3rem;
+}
+
+.sleepSubmitBtn {
+  padding: 0.45rem 1.2rem;
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sleepSubmitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+.sleepSubmitBtn:hover:not(:disabled) { background: #1a5fd4; }
+
+.sleepTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+
+.sleepTable th {
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.sleepTable td {
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.footer {
+  margin-top: 0.8rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.phase3Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+}
+
+.ledCurrentState {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.ledStateBadge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+.ledStateBadge.on  { background: #f0fdf4; color: #16a34a; border: 1.5px solid #86efac; }
+.ledStateBadge.off { background: #fef2f2; color: #dc2626; border: 1.5px solid #fca5a5; }
+
+
+.ledLiveStatus {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.historyList {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.historyList li {
+  color: #334155;
+}
+
+.historyList span {
+  color: #6b7280;
+  font-size: 0.82rem;
+  margin-left: 0.25rem;
+}
+
+.muted {
+  color: #6b7280;
+  margin: 0.55rem 0 0;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 760px) {
+  .alerts {
+    grid-template-columns: 1fr;
+  }
+
+  .phase3Grid {
+    grid-template-columns: 1fr;
+  }
+}

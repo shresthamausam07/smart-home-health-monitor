@@ -20,17 +20,17 @@
 // ----- Firebase -----
 // Get these from Firebase Console → Project Settings → Service Accounts → REST
 // API
-#define FIREBASE_HOST "your-project-id.firebaseio.com"
-#define FIREBASE_AUTH "your-firebase-database-secret"
+#define FIREBASE_HOST "smart-home-health-monitor-default-rtdb.firebaseio.com"
+#define FIREBASE_AUTH "7XC5KcoBzUpwtNKHKhSmx2IOgWMX01XsXytCkLli"
 
 // ----- Sensor Thresholds -----
-#define CO2_THRESHOLD 1000 // ppm — activate purifier/LED above this
-#define PM25_THRESHOLD 35  // µg/m³ — activate purifier/LED above this
-#define VOC_THRESHOLD 500  // raw ADC units — adjust based on your MS1100
+#define CO2_THRESHOLD 1000   // ppm
+#define PM25_THRESHOLD 35    // µg/m³
+#define VOC_THRESHOLD 2500   // MS1100 raw ADC — high VOC level
 
 // ----- Timing -----
 #define SENSOR_READ_INTERVAL 10000   // ms — read all sensors every 10 seconds
-#define FIREBASE_PUSH_INTERVAL 60000 // ms — push to Firebase every 60 seconds
+#define FIREBASE_PUSH_INTERVAL 10000 // ms — push to Firebase every 10 seconds
 #define LCD_ROTATE_INTERVAL 3000     // ms — rotate LCD screen every 3 seconds
 
 #endif
